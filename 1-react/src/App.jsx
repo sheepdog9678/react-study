@@ -1,4 +1,5 @@
 import ProductItem from "./components/ProductItem";
+import Title from "./components/Title";
 
 const fakeProduct = {
   id: "CACDA421",
@@ -10,9 +11,7 @@ const fakeProduct = {
 const App = () => (
   <div className="ProductPage">
     <div className="Page">
-      <header>
-        <h1>메뉴목록</h1>
-      </header>
+      <Title title="메뉴목록" />
       <main>
         <ul>
           <ProductItem product={fakeProduct} />
