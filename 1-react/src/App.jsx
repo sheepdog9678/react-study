@@ -11,7 +11,9 @@ const fakeProduct = {
 const App = () => (
   <div className="ProductPage">
     <div className="Page">
-      <Title title="메뉴목록" />
+      <header>
+        <Title>메뉴목록</Title>
+      </header>
       <main>
         <ul>
           <ProductItem product={fakeProduct} />

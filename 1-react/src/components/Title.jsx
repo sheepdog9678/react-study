@@ -1,9 +1,5 @@
-function Title({ title }) {
-  return (
-    <header>
-      <h1>{title}</h1>
-    </header>
-  );
-}
+const Title = ({ children }) => {
+  return <h1>{children}</h1>;
+};
 
 export default Title;
