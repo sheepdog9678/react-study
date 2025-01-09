@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Page from "./components/Page";
 import ProductItem from "./components/ProductItem";
 import Title from "./components/Title";
 
@@ -11,19 +12,13 @@ const fakeProduct = {
 
 const App = () => (
   <div className="ProductPage">
-    <div className="Page">
-      <header>
-        <Title>메뉴목록</Title>
-      </header>
-      <main>
-        <ul>
+    <Page header={<Title>메뉴목록</Title>} footer={<Navbar />}>
+      <ul>
+        <li>
           <ProductItem product={fakeProduct} />
-        </ul>
-      </main>
-      <footer>
-        <Navbar />
-      </footer>
-    </div>
+        </li>
+      </ul>
+    </Page>
   </div>
 );
 
