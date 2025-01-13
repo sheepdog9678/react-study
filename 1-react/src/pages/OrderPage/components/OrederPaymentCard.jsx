@@ -18,16 +18,21 @@ const fakeData = {
   totalPrice: 7000,
 };
 
-class OrderStatusCard extends Component {
+class OrederPaymentCard extends Component {
   render() {
     return (
       <div>
         <Card
-          header={fakeData.totalPrice}
+          header={fakeData.name}
+          footer={
+            <>
+              <Button>전화</Button>
+              <Button>가게보기</Button>
+            </>
+          }
           data={[
-            { term: "메뉴가격", description: fakeData.productPrice },
-            { term: "배달료", description: fakeData.deliveryPrice },
-            { term: "할인금액", description: fakeData.discountPrice },
+            { term: "주문일시", description: fakeData.orderDate },
+            { term: "주문번호", description: fakeData.id },
           ]}
         ></Card>
       </div>
@@ -35,4 +40,4 @@ class OrderStatusCard extends Component {
   }
 }
 
-export default OrderStatusCard;
+export default OrederPaymentCard;
