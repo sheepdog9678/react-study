@@ -2,14 +2,15 @@ import Card from "../../../components/Card";
 import Button from "../../../components/Button";
 
 const OrederPaymentCard = ({ data }) => {
-  const { name, orderDate, id } = data;
+  const { status, name, orderDate, id } = data;
   return (
     <>
       <Card
         header={
           <>
-            <h3>음식 준비중</h3>
-            <p>{name}</p>
+            <strong>{status}</strong>
+            <br />
+            {name}
           </>
         }
         footer={
