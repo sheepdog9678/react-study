@@ -4,6 +4,7 @@ import Page from "../../components/Page";
 import Title from "../../components/Title";
 import OrderStatusCard from "./components/OrderStatusCard";
 import OrederPaymentCard from "./components/OrederPaymentCard";
+import OrderDeliveryCard from "./components/OrderDeliveryCard";
 
 const fakeData = {
   deliveryAddress: "서울특별시 송파구 잠실동 1번지",
@@ -29,6 +30,7 @@ class OrderPage extends Component {
         <Page header={<Title>주문내역</Title>} footer={<Navbar />}>
           <OrederPaymentCard data={fakeData} />
           <OrderStatusCard data={fakeData} />
+          <OrderDeliveryCard data={fakeData} />
         </Page>
       </div>
     );
