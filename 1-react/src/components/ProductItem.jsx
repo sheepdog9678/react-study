@@ -1,19 +1,14 @@
 import Button from "./Button";
 
-function ProductItem({ product, btn }) {
+function ProductItem({ product, onClick }) {
   const { name, price, thumbnail } = product;
   return (
     <div className="ProductItem">
       <div className="description">
         <h2>{name}</h2>
         <div>{price.toLocaleString()}</div>
-        {!btn && (
-          <Button
-            styleType={"brand"}
-            onClick={() => {
-              console.log("장바구니로 이동");
-            }}
-          >
+        {onClick && (
+          <Button styleType={"brand"} onClick={onClick}>
             주문하기
           </Button>
         )}
