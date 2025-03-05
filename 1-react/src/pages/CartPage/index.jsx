@@ -3,6 +3,7 @@ import FormControl from "../../components/FormControl";
 import Page from "../../components/Page";
 import ProductItem from "../../components/ProductItem";
 import Title from "../../components/Title";
+import OrderForm from "./OrderForm";
 
 const CartPage = () => {
   const fakeItem = {
@@ -23,9 +24,7 @@ const CartPage = () => {
         }
       >
         <ProductItem product={fakeItem} />
-        <FormControl label="이름" htmlFor={"name"} required>
-          <input id="name" />
-        </FormControl>
+        <OrderForm />
       </Page>
     </div>
   );
