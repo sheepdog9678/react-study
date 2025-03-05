@@ -1,8 +1,12 @@
 import FormControl from "../../components/FormControl";
 
 function OrderForm() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submit");
+  };
   return (
-    <form className="OrderForm">
+    <form className="OrderForm" id="order-form" onSubmit={handleSubmit}>
       <FormControl label="주소" htmlFor={"deliveryAddress"} required>
         <input
           type="text"
